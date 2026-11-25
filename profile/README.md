@@ -11,7 +11,8 @@
 ## 我们在做什么
 
 - **aidc-lab**：六层路由引擎验证实验室——双协议接入、Lane/归档、成本 + 质量证据闭环。
-- **旁路 PoC**：会话记忆/用户画像、RSI 外环门控等，**独立私有仓**，默认不进产品树。
+- **aidc-finops**：内部成本核算与任务监控——只读旁路，PostgreSQL 账本、原币对账、月结关账与 FOCUS 导出。
+- **旁路 PoC**：成本核算、会话记忆/用户画像、RSI 外环门控等，**独立私有仓**，默认不进产品树。
 - **硬边界**：上层路由与模型网关解耦；Brain / RSI 外环永远在引擎与 LiteLLM 之外。
 
 ---
@@ -34,8 +35,9 @@
 | 仓库 | 可见性 | 一句话 |
 |---|---|---|
 | [`aidc-lab`](https://github.com/superaidc/aidc-lab) | private | 产品 / 实验室：六层路由引擎验证 |
+| [`aidc-finops`](https://github.com/superaidc/aidc-finops) | private | 内部成本核算与任务监控：只读旁路，原币对账、月结关账与 FOCUS 导出 |
 | [`aidc-rsi-poc`](https://github.com/superaidc/aidc-rsi-poc) | private | RSI bypass PoC：G0–G6 门控、Mem0 隔离；权威 `loop_once.py` md5 **`85c298146411229238b5e90a1e60ac17`**；默认 live-mem0 **未授权** |
-| [`session-memory-poc`](https://github.com/superaidc/session-memory-poc) | private | 会话记忆 / 用户画像旁路：claude-mem + Mem0，只接 LiteLLM `:4100` |
+| [`session-memory-poc`](https://github.com/superaidc/session-memory-poc) | private | 会话记忆 / 用户画像旁路：claude-mem + Mem0，只接 LiteLLM `:4100`；V5 起以显式检查点与跨客户端接力为主 |
 | [`.github`](https://github.com/superaidc/.github) | public | 本组织主页与运维手册（你正在看的文档） |
 
 更细的表格与「相关但不迁入」说明见 [`REPO-MAP.md`](../REPO-MAP.md)。日常操作见 [`ORG.md`](../ORG.md)。
@@ -70,6 +72,7 @@ git push -u origin main
 ```text
 ~/opencode/work/
   aidc-lab/              # 产品仓（已迁至 superaidc/aidc-lab）
+  aidc-finops/           # 成本核算与任务监控（第四仓）
   aidc-rsi-poc/          # RSI 旁路
   session-memory-poc/    # 会话记忆旁路
   aidc-lab-*/            # 历史 worktree / 实验分支工作区（共享 aidc-lab .git）

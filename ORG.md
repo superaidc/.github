@@ -9,6 +9,7 @@
 git clone https://github.com/superaidc/aidc-lab.git ~/opencode/work/aidc-lab
 
 # 旁路 PoC
+git clone https://github.com/superaidc/aidc-finops.git ~/opencode/work/aidc-finops
 git clone https://github.com/superaidc/aidc-rsi-poc.git ~/opencode/work/aidc-rsi-poc
 git clone https://github.com/superaidc/session-memory-poc.git ~/opencode/work/session-memory-poc
 ```
@@ -65,6 +66,7 @@ git config user.email 'woicyou@gmail.com'
 
 ```bash
 cd ~/opencode/work/aidc-lab && git remote -v && git fetch origin
+cd ~/opencode/work/aidc-finops && git remote -v && git status -sb
 cd ~/opencode/work/aidc-rsi-poc && git remote -v && git status -sb
 cd ~/opencode/work/session-memory-poc && git remote -v && git status -sb
 ```
