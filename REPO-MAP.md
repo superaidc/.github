@@ -7,8 +7,9 @@
 | 仓库 | URL | 可见性 | 状态 | 用途 |
 |---|---|---|---|---|
 | aidc-lab | https://github.com/superaidc/aidc-lab | private | 活跃 · 已从 `kabishou11/aidc-lab` 转入 | 六层路由引擎验证实验室（产品/lab） |
+| aidc-finops | https://github.com/superaidc/aidc-finops | private | 活跃 · PoC | 内部成本核算与任务监控：只读旁路，PostgreSQL 账本、原币对账、月结关账与 FOCUS 导出；不代理模型流量、不做预算熔断 |
 | aidc-rsi-poc | https://github.com/superaidc/aidc-rsi-poc | private | 活跃 · PoC | RSI 外环旁路；G0–G6；权威 loop_once md5 `85c298146411229238b5e90a1e60ac17`；默认 live-mem0 未授权 |
-| session-memory-poc | https://github.com/superaidc/session-memory-poc | private | 活跃 · PoC | 会话记忆/用户画像旁路（claude-mem + Mem0 → `:4100`） |
+| session-memory-poc | https://github.com/superaidc/session-memory-poc | private | 活跃 · PoC | 会话记忆/用户画像旁路（claude-mem + Mem0 → `:4100`）；V5 起以显式检查点与跨客户端接力为主 |
 | .github | https://github.com/superaidc/.github | public | 活跃 · 文档 | 组织主页 `profile/README.md`、本手册与地图 |
 
 ## 相关但不迁入（个人 / fork）
@@ -23,6 +24,7 @@
 | 仓 | Mac mini 路径 |
 |---|---|
 | aidc-lab | `~/opencode/work/aidc-lab` |
+| aidc-finops | `~/opencode/work/aidc-finops` |
 | aidc-rsi-poc | `~/opencode/work/aidc-rsi-poc` |
 | session-memory-poc | `~/opencode/work/session-memory-poc` |
 
@@ -38,3 +40,4 @@
 | 日期 (Asia/Shanghai) | 事项 |
 |---|---|
 | 2026-11-05 | 创建组织 `superaidc`；转入 `aidc-lab`；新建并推入 `aidc-rsi-poc`、`session-memory-poc`；发布本 `.github` 文档 |
+| 2026-11-26 | 补入第四仓 `aidc-finops`（2026-11-18 建立）；会话记忆仓补一句当前重点 |
